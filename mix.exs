@@ -24,7 +24,8 @@ defmodule ChatworkEx.MixProject do
     [
       {:ex_doc, "~> 0.14", only: :dev, runtime: false},
       {:jason, "~> 1.2"},
-      {:httpoison, "~> 1.8"}
+      {:httpoison, "~> 1.8"},
+      {:exvcr, "~> 0.11", only: :test}
     ]
   end
 end
