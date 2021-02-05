@@ -16,9 +16,8 @@ defmodule ChatworkEx.Agent do
 
   defp request(:post, path, params, custom_headers) do
     url = endpoint_url(path)
-    body = Jason.encode!(params)
 
-    HTTPoison.request!(:post, url, body, headers(custom_headers))
+    HTTPoison.post!(url, {:form, params}, headers(custom_headers))
     |> Response.new()
   end
 
